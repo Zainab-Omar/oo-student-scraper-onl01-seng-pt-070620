@@ -15,8 +15,8 @@ class Scraper
         
       end
     end
-    students
-    #binding.pry
+    students #hash of {:name=>"james", :profile_url=>students/james.html}
+   #binding.pry
     
   end
 
@@ -42,6 +42,8 @@ class Scraper
     student_profile[:profile_quote] = profile.css("div.main-wrapper.profile .vitals-text-container .profile-quote").text
     student_profile[:bio] = profile.css("div.main-wrapper.profile .description-holder p").text
 
-    student_profile
+    student_profile #hash of {twitter, linkedin, ...}
+     
   end
+  
 end
